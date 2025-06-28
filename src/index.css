@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------------
+   Root Design Tokens (Color Scheme)
+-----------------------------------*/
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7%;
+
+    --primary: 0 0% 7%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 85%;
+    --muted-foreground: 0 0% 40%;
+
+    --radius: 0.5rem;
+  }
+}
+
+/* -------------------------------
+   Global Styling
+-----------------------------------*/
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-black antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+/* -------------------------------
+   Utilities
+-----------------------------------*/
+@layer utilities {
+  .section-padding {
+    @apply px-6 md:px-20 py-20;
+  }
+
+  .hero-heading {
+    @apply text-4xl md:text-7xl font-extrabold leading-tight tracking-tight;
+  }
+
+  .hero-subheading {
+    @apply text-lg md:text-2xl text-gray-400 mt-4 max-w-2xl;
+  }
+
+  .highlighted {
+    @apply text-gray-400;
+  }
+
+  .btn-primary {
+    @apply bg-black text-white px-6 py-3 rounded-full font-medium hover:bg-gray-900 transition;
+  }
+
+  .brand-logo {
+    @apply font-bold text-xl;
+  }
+
+  .brand-logo span:first-child {
+    @apply text-gray-400;
+  }
+
+  .brand-logo span:last-child {
+    @apply text-black;
+  }
+
+  .nav-button {
+    @apply border px-4 py-2 rounded-full font-medium hover:bg-gray-100 transition;
+  }
+}
+
+/* -------------------------------
+   Glassmorphism (Optional UI Style)
+-----------------------------------*/
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* -------------------------------
+   Gradient Text (Optional)
+-----------------------------------*/
+.text-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* -------------------------------
+   Scrollbar Styling
+-----------------------------------*/
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}
+
+/* -------------------------------
+   Text Selection Styling
+-----------------------------------*/
+::selection {
+  background: rgba(0, 0, 0, 0.1);
+}
