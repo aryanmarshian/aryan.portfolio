@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
+import { Analytics } from "@vercel/analytics/next"
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
