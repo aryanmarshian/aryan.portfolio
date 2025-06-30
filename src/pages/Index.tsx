@@ -520,7 +520,7 @@ const Index = () => {
                     </div>
                     <div>
                       <h3 className="font-medium text-foreground">LinkedIn</h3>
-                      <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                      <a href="https://www.linkedin.com/in/aryan-singh-8b178521b/" className="text-muted-foreground hover:text-foreground transition-colors">
                         Connect with me on LinkedIn
                       </a>
                     </div>
@@ -544,7 +544,7 @@ const Index = () => {
               <a href="mailto:aryansingh9503@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors p-2 rounded-lg hover:bg-muted">
                 <Mail size={28} strokeWidth={1.5} />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors p-2 rounded-lg hover:bg-muted">
+              <a href="https://www.linkedin.com/in/aryan-singh-8b178521b/" className="text-muted-foreground hover:text-foreground transition-colors p-2 rounded-lg hover:bg-muted">
                 <Linkedin size={28} strokeWidth={1.5} />
               </a>
             </div>
