@@ -11,7 +11,7 @@ import { useToast } from '@/hooks/use-toast';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { Analytics } from "@vercel/analytics/next"
 import "../styles/main.scss";
-import profileImage from "C:/Users/way2marsh/Desktop/work/aryan.portfolio/img.jpg";
+import profileImage from "../styles/img.jpg";
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
