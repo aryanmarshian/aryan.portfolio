@@ -232,7 +232,7 @@ const Index = () => {
             viewport={{ once: true }} 
             className="mb-12 sm:mb-16"
           >
-            <h2 className="gradient-text">Overview</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">Overview</h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed">
               A multidisciplinary AI engineer passionate about building scalable intelligent systems, 
               solving real-world problems through machine learning and computer vision to achieve 
@@ -272,7 +272,7 @@ const Index = () => {
             viewport={{ once: true }} 
             className="mb-12 sm:mb-16"
           >
-            <h2 className="gradient-text">Featured Projects</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">Featured Projects</h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl">
               A showcase of my recent projects in machine learning, computer vision, and AI research
             </p>
@@ -341,7 +341,7 @@ const Index = () => {
             viewport={{ once: true }} 
             className="mb-16"
           >
-            <h2 className="gradient-text">Experience</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">Experience</h2>
           </motion.div>
 
           <div className="max-w-3xl mx-auto">
@@ -388,7 +388,7 @@ const Index = () => {
             viewport={{ once: true }} 
             className="mb-16"
           >
-            <h2 className="gradient-text">Education</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">Education</h2>
           </motion.div>
 
           <div className="max-w-3xl mx-auto grid gap-6">

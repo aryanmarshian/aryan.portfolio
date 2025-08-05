@@ -168,12 +168,22 @@
 }
 
 .gradient-text {
+  font-family:"Anta", sans-serif;
   font-size: 3rem;
   font-weight: 700;
-  background: linear-gradient(90deg, #ffffff, #7a7a7a); /* Customize gradient */
+  background: linear-gradient(90deg, #ffffff, #7a7a7a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
 }
+
+/* 📱 Responsive for smaller screens */
+@media (max-width: 768px) {
+  .gradient-text {
+    font-size: 1.7rem; /* or 1.5rem if you want it even smaller */
+  }
+}
+
 
 
 /* Custom scrollbar */
