@@ -10,6 +10,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { Analytics } from "@vercel/analytics/next"
+import "../styles/main.scss";
+import profileImage from "C:/Users/way2marsh/Desktop/work/aryan.portfolio/img.jpg";
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +19,7 @@ const Index = () => {
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
   const { toast } = useToast();
 
-  const resumeUrl = "https://drive.google.com/file/d/1zLr2PeUR6g0Q_pVst-l0a79G9SaL_Noy/view?usp=drive_link";
+  const resumeUrl = "https://drive.google.com/file/d/1Ye4hQAYMLMFC2uwdn2ujgtSlN-lM6rZm/view?usp=sharing";
 
   const skills = ['Python', 'JavaScript', 'React', 'Node.js', 'FastAPI', 'OpenAI', 'LangChain', 'UIPath', 'Streamlit', 'Hugging Face', 'AWS SageMaker', 'Docker', 'Kubernetes', 'MongoDB Atlas', 'MySQL', 'MongoDB', 'BERT', 'GPT', 'CNNs', 'YOLO', 'Vision Transformers', 'OpenCV', 'Tesseract'];
   const projects = [
@@ -115,6 +117,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      {/* Star background */}
+       <div id="stars"></div>
+       <div id="stars2"></div>
+       <div id="stars3"></div>
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -136,12 +142,11 @@ const Index = () => {
                 </a>
               ))}
             </div>
-            <ThemeToggle />
+            
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
-            <ThemeToggle />
             <button className="text-foreground" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -171,47 +176,48 @@ const Index = () => {
         )}
       </nav>
 
-      {/* Hero Section */}
-<section className="min-h-screen flex items-center relative overflow-hidden bg-gradient-to-br from-background via-muted/20 to-muted/40">        
-  <div className="container mx-auto px-4 sm:px-6 py-20 relative z-10 max-w-7xl">
-    <div className="max-w-5xl">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="space-y-6 sm:space-y-8"
-      >
-        <div className="space-y-4 sm:space-y-6">
-          <h1 className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-normal">
-            Hello! I'm Aryan Singh.
-          </h1>
+{/* Hero Section */}
+<section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-background via-muted/20 to-muted/40">
+  <div className="container mx-auto px-4 sm:px-6 py-20 relative z-10 max-w-4xl text-center">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="space-y-8"
+    >
+      {/* Optional Profile Image */}
+      <div className="flex justify-center">
+        <img 
+          src={profileImage} // Replace with actual path
+          alt="Aryan Singh"
+          className="w-24 h-24 rounded-full border-2 border-muted-foreground"
+        />
+      </div>
 
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-foreground">
-            <span className="block">Specializing in</span>
-            <span className="block text-foreground/90">machine learning</span>
-            <span className="block">solutions with</span>
-            <span className="block">emphasis on</span>
-            <span className="block text-foreground/80">visual intelligence</span>
-          </h2>
+      <h1 className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-normal">
+        Hi, I'm Aryan Singh 
+      </h1>
 
-          <div className="space-y-4 sm:space-y-6">
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl text-muted-foreground font-light">
-              Machine Learning | Deep Learning | Artificial Intelligence
-            </p>
+      <h2 className="gradient-text">
+        Building intelligent <span className="text-foreground/80">systems</span>, 
+        <br />AI-powered <span className="text-foreground/90">products</span>, and real-world <span className="text-foreground/60">impact</span>.
+      </h2>
 
-            <div className="pt-4 sm:pt-6">
-              <Button 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground border-0 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base font-medium transition-all duration-200 shadow-lg hover:shadow-xl"
-                onClick={() => window.open(resumeUrl, '_blank')}
-              >
-                <Eye className="mr-2" size={18} />
-                View Resume
-              </Button>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-    </div>
+      <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light">
+        Machine Learning • Deep Learning • Visual Intelligence 
+      </p>
+
+      <div className="pt-6">
+        <Button 
+              variant="outline"
+              className="border-border text-foreground hover:bg-muted hover:border-muted-foreground px-4 sm:px-6 py-2 rounded-lg text-sm transition-all duration-200"
+              onClick={() => window.open(resumeUrl, '_blank')}
+            >
+          <Eye className="mr-2" size={18} />
+          View Resume
+        </Button>
+      </div>
+    </motion.div>
   </div>
 </section>
 
@@ -226,7 +232,7 @@ const Index = () => {
             viewport={{ once: true }} 
             className="mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-foreground">Selected works</h2>
+            <h2 className="gradient-text">Overview</h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed">
               A multidisciplinary AI engineer passionate about building scalable intelligent systems, 
               solving real-world problems through machine learning and computer vision to achieve 
@@ -252,22 +258,7 @@ const Index = () => {
             ))}
           </motion.div>
 
-          <motion.div 
-            initial={{ opacity: 0, y: 50 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.8, delay: 0.4 }} 
-            viewport={{ once: true }} 
-            className="max-w-3xl"
-          >
-            <Button 
-              variant="outline"
-              className="border-border text-foreground hover:bg-muted hover:border-muted-foreground px-4 sm:px-6 py-2 rounded-lg text-sm transition-all duration-200"
-              onClick={() => window.open(resumeUrl, '_blank')}
-            >
-              <Download className="mr-2" size={16} />
-              Download Resume
-            </Button>
-          </motion.div>
+
         </div>
       </section>
 
@@ -281,7 +272,7 @@ const Index = () => {
             viewport={{ once: true }} 
             className="mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-foreground">Featured Projects</h2>
+            <h2 className="gradient-text">Featured Projects</h2>
             <p className="text-base sm:text-lg text-muted-foreground max-w-2xl">
               A showcase of my recent projects in machine learning, computer vision, and AI research
             </p>
@@ -350,7 +341,7 @@ const Index = () => {
             viewport={{ once: true }} 
             className="mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">Experience</h2>
+            <h2 className="gradient-text">Experience</h2>
           </motion.div>
 
           <div className="max-w-3xl mx-auto">
@@ -397,7 +388,7 @@ const Index = () => {
             viewport={{ once: true }} 
             className="mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">Education</h2>
+            <h2 className="gradient-text">Education</h2>
           </motion.div>
 
           <div className="max-w-3xl mx-auto grid gap-6">
